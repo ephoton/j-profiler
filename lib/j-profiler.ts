@@ -32,7 +32,6 @@
 	let root = typeof self == 'object' && self.self === self && self || this;
 	
 	
-	
 	class JProfiler {
 		
 		
@@ -96,9 +95,7 @@
 		getReport: () => {
 			
 		}
-		
-		
-		
+
 		
 		
 	}

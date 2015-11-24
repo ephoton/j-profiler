@@ -54,4 +54,4 @@
     })();
     root.jProfiler = JProfiler;
 })();
-//# sourceMappingURL=jprofiler.js.map
+//# sourceMappingURL=j-profiler.js.map
