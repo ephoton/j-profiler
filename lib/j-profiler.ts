@@ -1,5 +1,7 @@
 /**
- * 
+ * 1，单个函数以及相关性能
+ * 2，多个函数以及对比性能
+ * 3，
  */
 ;(function() {
 	'use strict';
@@ -34,8 +36,6 @@
 	
 	class JProfiler {
 		
-		
-		
 		private _report: ReportInfo;
 		private	_defaultSettings = {};
 		
@@ -45,7 +45,7 @@
 				func();
 			}
 			catch (error) {
-				console.log((<any>func).name + ': error');
+				throw Error((<any>func).name + ' test error:' + error);
 				return 0;
 			}
 			
@@ -60,7 +60,7 @@
 			var a = 1;
 		}
 
-		test (func: () => any, name?: string, repeat?: number): ReportInfo {
+		test (func: () => any, repeat?: number, name?: string): ReportInfo {
 			let repeatTimes = repeat || 1,
 				testStatus = true,
 				sum = 0,
@@ -88,10 +88,6 @@
 			return report;	
 		}
 		
-		compare: () => {
-			
-		}
-				
 		getReport: () => {
 			
 		}
